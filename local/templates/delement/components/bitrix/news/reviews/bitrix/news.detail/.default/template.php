@@ -1,11 +1,4 @@
 <?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die(); ?>
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title><?php echo $arResult["NAME"]; ?> — детальная страница отзыва</title>
-</head>
-<body>
 
 
 <div class="news-detail">
