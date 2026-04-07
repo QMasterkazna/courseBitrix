@@ -11,7 +11,7 @@
             <?php if (!empty($arResult["DETAIL_PICTURE"]["SRC"]) || !empty($arResult["PREVIEW_PICTURE"]["SRC"])){ ?>
                 <div style="float:left; margin:0 15px 10px 0;">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"]; ?>">
-                        <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]; ?>" width="80" alt="<?php echo $arItem["NAME"]; ?>" style="border-radius:50%;" />
+                        <img src="<?= !empty($arResult["DETAIL_PICTURE"]["SRC"]) ? $arResult["DETAIL_PICTURE"]["SRC"] : $arResult["PREVIEW_PICTURE"]["SRC"]; ?>" style="border-radius:50%;" />
                     </a>
                 </div>
             <?php } ?>
