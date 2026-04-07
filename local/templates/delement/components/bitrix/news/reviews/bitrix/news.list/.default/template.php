@@ -8,12 +8,13 @@
     <!-- Отзыв 1 -->
     <?php foreach($arResult["ITEMS"] as $arItem){ ?>
         <div class="news-item">
-            <div style="float:left; margin:0 15px 10px 0;">
-                <a href="<?= $arItem["DETAIL_PAGE_URL"]; ?>">
-                    <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]; ?>" width="80" alt="<?php echo $arItem["NAME"]; ?>" style="border-radius:50%;" />
-                </a>
-            </div>
-
+            <?php if (!empty($arResult["DETAIL_PICTURE"]["SRC"]) || !empty($arResult["PREVIEW_PICTURE"]["SRC"])){ ?>
+                <div style="float:left; margin:0 15px 10px 0;">
+                    <a href="<?= $arItem["DETAIL_PAGE_URL"]; ?>">
+                        <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"]; ?>" width="80" alt="<?php echo $arItem["NAME"]; ?>" style="border-radius:50%;" />
+                    </a>
+                </div>
+            <?php } ?>
             <div class="news-title">
                 <a href="<?= $arItem["DETAIL_PAGE_URL"]; ?>"><?= $arItem["NAME"]; ?></a>
             </div>
